@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Missão 2049</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <main class="container">
+
+    <!-- TELA INICIAL -->
+    <section id="tela-inicial" class="tela ativa">
+
+      <div class="card">
+
+        <span class="badge">MISSÃO 2049</span>
+
+        <h1>
+          Em 2049,
+          <span class="destaque"></span>...
+        </h1>
+
+        <p>
+          O futuro está cheio de desafios.
+          Nesta missão, você deverá responder perguntas
+          e tomar decisões para descobrir como será o mundo em 2049.
+        </p>
+
+        <button id="btn-iniciar" class="btn">
+          Iniciar missão
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <!-- TELA DO JOGO -->
+    <section id="tela-jogo" class="tela">
+
+      <div class="card">
+
+        <div class="topo">
+
+          <span id="contador">
+            Pergunta 1 de 5
+          </span>
+
+          <span id="pontuacao">
+            Pontos: 0
+          </span>
+
+        </div>
+
+
+        <!-- BARRA DE PROGRESSO -->
+        <div class="progresso">
+
+          <div id="barra-progresso"></div>
+
+        </div>
+
+
+        <!-- AFIRMAÇÃO ALEATÓRIA -->
+        <p
+          class="afirmacao"
+          id="afirmacao">
+        </p>
+
+
+        <!-- PERGUNTA -->
+        <h2 id="pergunta"></h2>
+
+
+        <!-- ALTERNATIVAS -->
+        <div
+          id="alternativas"
+          class="alternativas">
+        </div>
+
+
+        <!-- MENSAGEM -->
+        <p
+          id="mensagem"
+          class="mensagem">
+        </p>
+
+
+        <!-- PRÓXIMA -->
+        <button
+          id="btn-proxima"
+          class="btn"
+          hidden>
+          Próxima pergunta
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <!-- TELA FINAL -->
+    <section id="tela-final" class="tela">
+
+      <div class="card resultado">
+
+        <span class="badge">
+          MISSÃO CONCLUÍDA
+        </span>
+
+        <h1>
+          Parabéns!
+        </h1>
+
+        <p id="resultado-texto"></p>
+
+
+        <div class="resultado-box">
+
+          <span>
+            Sua pontuação
+          </span>
+
+          <strong id="resultado-pontos">
+            0/5
+          </strong>
+
+        </div>
+
+
+        <button
+          id="btn-jogar-novamente"
+          class="btn">
+
+          Jogar novamente
+
+        </button>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- JAVASCRIPT -->
+  <script src="script.js"></script>
+
+</body>
+</html>

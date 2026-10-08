@@ -1,0 +1,423 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  min-height: 100vh;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  background:
+    linear-gradient(
+      135deg,
+      #08111f,
+      #102a43,
+      #176b87
+    );
+
+  color: white;
+}
+
+
+/* CONTAINER */
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  padding: 25px;
+}
+
+
+/* TELAS */
+
+.tela {
+  display: none;
+
+  width: 100%;
+  max-width: 760px;
+}
+
+
+.tela.ativa {
+  display: block;
+
+  animation: aparecer 0.5s ease;
+}
+
+
+/* CARD */
+
+.card {
+
+  background:
+    rgba(255, 255, 255, 0.10);
+
+  border:
+    1px solid rgba(255, 255, 255, 0.20);
+
+  border-radius: 25px;
+
+  padding: 45px;
+
+  backdrop-filter: blur(12px);
+
+  box-shadow:
+    0 20px 60px
+    rgba(0, 0, 0, 0.30);
+}
+
+
+/* BADGE */
+
+.badge {
+
+  display: inline-block;
+
+  background: #4dd0e1;
+
+  color: #082032;
+
+  padding: 8px 14px;
+
+  border-radius: 50px;
+
+  font-size: 12px;
+
+  font-weight: bold;
+
+  letter-spacing: 1px;
+
+  margin-bottom: 20px;
+}
+
+
+/* TÍTULO */
+
+h1 {
+
+  font-size: 42px;
+
+  margin-bottom: 20px;
+}
+
+
+h2 {
+
+  font-size: 25px;
+
+  line-height: 1.35;
+
+  margin: 20px 0;
+}
+
+
+/* DESTAQUE */
+
+.destaque {
+
+  color: #4dd0e1;
+}
+
+
+/* PARÁGRAFOS */
+
+p {
+
+  color: #dceaf2;
+
+  font-size: 17px;
+
+  line-height: 1.7;
+}
+
+
+/* BOTÃO */
+
+.btn {
+
+  border: none;
+
+  border-radius: 12px;
+
+  padding: 14px 25px;
+
+  margin-top: 25px;
+
+  background: #4dd0e1;
+
+  color: #082032;
+
+  font-size: 16px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+
+.btn:hover {
+
+  transform: translateY(-2px);
+
+  filter: brightness(1.08);
+}
+
+
+/* TOPO DO JOGO */
+
+.topo {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  gap: 15px;
+
+  color: #dceaf2;
+
+  font-size: 14px;
+
+  font-weight: bold;
+}
+
+
+/* BARRA DE PROGRESSO */
+
+.progresso {
+
+  height: 8px;
+
+  background:
+    rgba(255,255,255,0.15);
+
+  border-radius: 20px;
+
+  overflow: hidden;
+
+  margin-top: 15px;
+}
+
+
+#barra-progresso {
+
+  width: 20%;
+
+  height: 100%;
+
+  background: #4dd0e1;
+
+  transition:
+    width 0.3s ease;
+}
+
+
+/* AFIRMAÇÃO */
+
+.afirmacao {
+
+  color: #8ee9f4;
+
+  font-style: italic;
+
+  margin-top: 25px;
+}
+
+
+/* ALTERNATIVAS */
+
+.alternativas {
+
+  display: grid;
+
+  gap: 12px;
+}
+
+
+/* BOTÃO DE ALTERNATIVA */
+
+.alternativa {
+
+  width: 100%;
+
+  padding: 16px;
+
+  border:
+    1px solid rgba(255,255,255,0.22);
+
+  border-radius: 12px;
+
+  background:
+    rgba(255,255,255,0.08);
+
+  color: white;
+
+  text-align: left;
+
+  font-size: 16px;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+
+.alternativa:hover {
+
+  background:
+    rgba(77,208,225,0.20);
+
+  border-color:
+    #4dd0e1;
+}
+
+
+/* QUANDO RESPONDE */
+
+.alternativa:disabled {
+
+  cursor: default;
+
+  opacity: 0.75;
+}
+
+
+/* RESPOSTA CORRETA */
+
+.alternativa.correta {
+
+  background:
+    rgba(50, 205, 120, 0.30);
+
+  border-color:
+    #65e6a0;
+}
+
+
+/* RESPOSTA ERRADA */
+
+.alternativa.errada {
+
+  background:
+    rgba(255, 90, 90, 0.30);
+
+  border-color:
+    #ff8585;
+}
+
+
+/* MENSAGEM */
+
+.mensagem {
+
+  min-height: 30px;
+
+  margin-top: 15px;
+
+  font-weight: bold;
+}
+
+
+/* RESULTADO */
+
+.resultado {
+
+  text-align: center;
+}
+
+
+/* CAIXA DA PONTUAÇÃO */
+
+.resultado-box {
+
+  margin:
+    25px auto 0;
+
+  padding: 20px;
+
+  border-radius: 15px;
+
+  background:
+    rgba(255,255,255,0.10);
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 8px;
+}
+
+
+/* NÚMERO DA PONTUAÇÃO */
+
+.resultado-box strong {
+
+  font-size: 38px;
+
+  color: #4dd0e1;
+}
+
+
+/* ANIMAÇÃO */
+
+@keyframes aparecer {
+
+  from {
+
+    opacity: 0;
+
+    transform:
+      translateY(15px);
+  }
+
+  to {
+
+    opacity: 1;
+
+    transform:
+      translateY(0);
+  }
+
+}
+
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 600px) {
+
+  .card {
+
+    padding:
+      28px 20px;
+  }
+
+
+  h1 {
+
+    font-size: 32px;
+  }
+
+
+  h2 {
+
+    font-size: 21px;
+  }
+
+
+  .topo {
+
+    flex-direction:
+      column;
+  }
+
+}
